@@ -21,7 +21,7 @@ public class PharmacyController {
 
     @GetMapping("/closestPharmacy/{latLongPair}")
     public ResponseEntity<String> getClosestPharmacy(@PathVariable(value = "latLongPair") String latLongPair) {
-        String[] pairParts = latLongPair.strip().split(",");  // split at the comma
+        String[] pairParts = latLongPair.split(",");  // split at the comma
         Double minDistance = null;
         Pharmacy closestPharmacy = null;
 
